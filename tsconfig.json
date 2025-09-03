@@ -1,0 +1,32 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "target": "ESNext",
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+     "@/*": ["*"],
+      "components/*": ["components/*"],
+      "lib/*": ["lib/*"],
+      "hooks/*": ["hooks/*"]
+    },
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "types": ["expo", "react", "react-native"]
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "./.expo/types/**/*.ts",
+    "declarations.d.ts",
+    "app/**/*",
+    "metro.config.js",
+    "types/**/*.d.ts","firebase.ts"
+    
+  ]
+  
+}
