@@ -91,3 +91,70 @@ export async function getAuthInstance(): Promise<import('firebase/auth').Auth> {
     return getAuth(app);
   }
 }
+
+
+
+
+
+
+// // firebase.ts
+// // Centralized Firebase initialization for RN + Web
+
+// import { initializeApp, getApps, getApp } from 'firebase/app';
+// import { getFirestore } from 'firebase/firestore';
+// import { getStorage } from 'firebase/storage';
+// import {
+//   getAuth,
+//   initializeAuth,
+//   getReactNativePersistence,
+// } from 'firebase/auth';
+// import AsyncStorage from '@react-native-async-storage/async-storage';
+// import { Platform } from 'react-native';
+
+// // --------------------
+// // Firebase Config
+// // (Use your actual keys below; do NOT share publicly)
+// // --------------------
+// const firebaseConfig = {
+//   apiKey: 'AIzaSyC8kfUPiFotlvKoZxhR6E6vB2yMgCbeZuQ',
+//   authDomain: 'poundrrboxing.firebaseapp.com',
+//   projectId: 'poundrrboxing',
+//   storageBucket: 'poundrrboxing.firebasestorage.app',
+//   messagingSenderId: '570519794189',
+//   appId: '1:570519794189:web:526da78c8552a537761b44',
+//   measurementId: 'G-83BJPMC23L',
+// };
+
+// // --------------------
+// // App Initialization
+// // --------------------
+// const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
+
+// // --------------------
+// // Firestore
+// // --------------------
+// export const db = getFirestore(app);
+
+// // --------------------
+// // Storage
+// // --------------------
+// export const storage = getStorage(app);
+
+// // --------------------
+// // Auth (handles RN persistence)
+// // --------------------
+// export const getAuthInstance = () => {
+//   if (Platform.OS === 'web') {
+//     // Web can use regular getAuth
+//     return getAuth(app);
+//   }
+//   // React Native must use initializeAuth with AsyncStorage
+//   try {
+//     return initializeAuth(app, {
+//       persistence: getReactNativePersistence(AsyncStorage),
+//     });
+//   } catch (err) {
+//     // If already initialized, just getAuth
+//     return getAuth(app);
+//   }
+// };

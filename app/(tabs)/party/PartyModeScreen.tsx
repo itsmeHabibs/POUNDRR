@@ -10,7 +10,9 @@ import {
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { Alert, Pressable, Text, View } from "react-native";
-import { db } from "../../../../POUNDRR/firebase";
+// Update the import path below to the correct relative path for your project structure.
+// For example, if firebase.ts is in the root directory:
+import { db } from "../../../firebase";
 import PartyParticipantList from "./PartyParticipantList";
 import styles from "./partyStyles";
 import PartyTimer from "./PartyTimer";
